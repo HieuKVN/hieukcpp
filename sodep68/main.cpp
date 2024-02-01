@@ -9,7 +9,7 @@ bool ktr(int num)
     while (num > 0)
     {
         int n = num % 10;
-        if (n == 6 || n == 8)
+        if (n == 6 && n == 8)
         {
             check = true;
         }
