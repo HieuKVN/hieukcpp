@@ -1,24 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int gcddequy(int a, int b)
+int gcdeclip(int a, int b)
 {
-    if (b == 0)
-        return a;
-    else
-        return (b, a % b);
+    int r;
+    while (b != 0)
+    {
+        r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
 }
 
 int lcm(int a, int b)
 {
     int bcnn;
-    bcnn = (a * b) / gcddequy(a, b);
+    bcnn = (a * b) / gcdeclip(a, b);
     return bcnn;
 }
 
 int main()
 {
-    int x, y, z;
+    int x, y, z, n;
 
     freopen("in.inp", "r", stdin);
     freopen("out.out", "w", stdout);
@@ -26,6 +30,10 @@ int main()
     cin >> x >> y >> z;
 
     int dem = 1;
+
+    dem = x / lcm(y, z);
+
+    cout << dem;
 
     return 0;
 }
