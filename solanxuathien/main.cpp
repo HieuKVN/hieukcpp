@@ -4,12 +4,14 @@ using namespace std;
 int main()
 {
     int n;
-    int k;
+
     freopen("in.inp", "r", stdin);
     freopen("out.out", "w", stdout);
-    cin >> n >> k;
+
+    cin >> n;
 
     int a[n];
+
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
@@ -17,17 +19,16 @@ int main()
 
     sort(a, a + n);
 
-    int dem = 0;
+    int dem = 1;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < i; j++)
+        if (a[i] == a[i - 1])
+            dem++;
+        else
         {
-            if (a[i] + a[j] == k)
-            {
-                cout << a[j] << a[i] << endl;
-                break;
-            }
+            cout << a[i - 1] << " : " << dem << endl;
+            dem = 1;
         }
     }
 
