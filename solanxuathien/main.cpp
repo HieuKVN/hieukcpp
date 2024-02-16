@@ -7,7 +7,6 @@ int main()
 
     freopen("in.inp", "r", stdin);
     freopen("out.out", "w", stdout);
-
     cin >> n;
 
     int a[n];

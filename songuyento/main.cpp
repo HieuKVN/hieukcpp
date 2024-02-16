@@ -3,7 +3,7 @@
 using namespace std;
 
 long long f[nmax];
-long long a,b, i;
+long long a, b, i;
 
 void sang(long long u)
 {
@@ -28,17 +28,17 @@ int main()
 	freopen("in.inp", "r", stdin);
 	freopen("out.out", "w", stdout);
 	sang(nmax);
-    cin >> a;
+	cin >> a;
 	int dem, i = 0;
 
-    while (dem<a)
-    {
-        if (f[i])
-        {
-            cout << i << " " ;
-            dem++;
-        }
-        i++;
-    }
+	while (dem < a)
+	{
+		if (f[i])
+		{
+			cout << i << " ";
+			dem++;
+		}
+		i++;
+	}
 	return 0;
 }
