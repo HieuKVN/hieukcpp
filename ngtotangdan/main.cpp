@@ -3,18 +3,17 @@
 using namespace std;
 
 long long f[nmax];
-long long a,b, i;
+long long a, b, i;
 
 bool snt(int n)
 {
-	if(n<2)
+	if (n < 2)
 		return false;
-	for(int i=2; i<=n/2; i++)
-		if(n%i==0)
+	for (int i = 2; i <= n / 2; i++)
+		if (n % i == 0)
 			return false;
 	return true;
 }
-
 
 void sang(long long u)
 {
@@ -37,32 +36,33 @@ void sang(long long u)
 int main()
 {
 	int n;
-    int k;
-    freopen("in.inp", "r", stdin);
-    freopen("out.out", "w", stdout);
+	int k;
+	freopen("in.inp", "r", stdin);
+	freopen("out.out", "w", stdout);
 
-    sang(nmax);
+	sang(nmax);
 
-    cin >> n >> k;
+	cin >> n >> k;
 
-    int a[n];
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
+	int a[n];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+	}
 
-    sort(a, a + n);
+	sort(a, a + n);
 
-    int s = 0;
+	int s = 0;
 
-	for (int i = 0; i < n; i++) {
-        if (snt(a[i]))
-        {
-            s+=a[i];
-            cout << a[i] << " ";
-        }
-
-
-    }
-	cout << endl << s;
+	for (int i = 0; i < n; i++)
+	{
+		if (snt(a[i]))
+		{
+			s += a[i];
+			cout << a[i] << " ";
+		}
+	}
+	cout << endl
+		 << s;
 	return 0;
 }
