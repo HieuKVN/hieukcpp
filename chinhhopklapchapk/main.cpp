@@ -3,11 +3,15 @@ using namespace std;
 
 int a[1000];
 int f[1000] = {0};
-int n;
+int b[1000];
+int n, k;
+int d = 0;
 
-void xuly()
+void xuat()
 {
-    int d = 0;
+    for (int i = 1; i <= k; i++)
+        cout << a[i] << " ";
+    cout << endl;
 }
 
 void Try(int i)
@@ -18,8 +22,10 @@ void Try(int i)
         {
             a[i] = j;
             f[j] = 1;
-            if (i == n)
-                d++;
+            if (i == k)
+            {
+                xuat();
+            }
             else
                 Try(i + 1);
             f[j] = 0;
@@ -31,9 +37,9 @@ int main()
 {
     freopen("in.inp", "r", stdin);
     freopen("out.out", "w", stdout);
-    cin >> n;
+    cin >> n >> k;
+
     Try(1);
-    int d = 0;
-    cout << d << endl;
+
     return 0;
 }
