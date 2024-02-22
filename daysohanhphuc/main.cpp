@@ -3,7 +3,7 @@
 using namespace std;
 
 long long f[nmax];
-long long s,i,n;
+long long s, i, n;
 
 void sang(long long u)
 {
@@ -30,14 +30,15 @@ int main()
 	sang(nmax);
 	cin >> n;
 	int dem = 0;
-	for (i = n; i>=2; i--)
-    {
-        if((n % i == 0) || f[i] )
-        {
-            cout << i << " ";
-            dem++;
-        }
-    }
-    cout << endl << dem;
+	for (i = n; i >= 2; i--)
+	{
+		if ((n % i == 0) || f[i])
+		{
+			cout << i << " ";
+			dem++;
+		}
+	}
+	cout << endl
+		 << dem;
 	return 0;
 }

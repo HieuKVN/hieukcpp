@@ -9,12 +9,15 @@ long long a, b, i;
 void sang(long long u)
 {
     long long j;
-    for (long long i = 0; i <= u; i++) {
+    for (long long i = 0; i <= u; i++)
+    {
         f[i] = 1;
     }
     f[0] = f[1] = 0;
-    for (i = 2; i * i <= u; i++) {
-        if (f[i]) {
+    for (i = 2; i * i <= u; i++)
+    {
+        if (f[i])
+        {
             for (j = i * i; j <= u; j += i)
                 f[j] = 0;
         }
@@ -23,7 +26,8 @@ void sang(long long u)
 
 bool kitu(long long u)
 {
-    while (u > 0) {
+    while (u > 0)
+    {
         int r = u % 10;
         if (f[u])
             return true;

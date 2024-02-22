@@ -3,7 +3,7 @@
 using namespace std;
 
 long long f[nmax];
-long long a,b, i;
+long long a, b, i;
 
 void sang(long long u)
 {
@@ -29,12 +29,12 @@ int main()
 	freopen("in.out", "w", stdout);
 	sang(nmax);
 	long long dem = 0;
-	cin >> a>>b;
+	cin >> a >> b;
 	for (i = a; i <= b; i++)
 	{
 		if (f[i])
 		{
-			dem=dem+1;
+			dem = dem + 1;
 		}
 	}
 	cout << dem;
