@@ -3,7 +3,7 @@
 using namespace std;
 
 long long f[nmax];
-long long a,b,n,i;
+long long a, b, n, i;
 
 void sang(long long u)
 {
@@ -25,14 +25,15 @@ void sang(long long u)
 
 int pt(int n)
 {
-    int tmp;
-    int res = 0;
-    while(n > 0){
-        tmp = n % 10;
-        res = res * 10 + tmp;
-        n = n / 10;
-    }
-    return res;
+	int tmp;
+	int res = 0;
+	while (n > 0)
+	{
+		tmp = n % 10;
+		res = res * 10 + tmp;
+		n = n / 10;
+	}
+	return res;
 }
 
 int main()
@@ -40,12 +41,12 @@ int main()
 	freopen("in.inp", "r", stdin);
 	freopen("out.out", "w", stdout);
 	sang(nmax);
-    cin >> a>>b;
-    for (i=a;i<=b;i++)
-    {
-        if (f[pt(i)])
-            cout << i << " ";
-    }
+	cin >> a >> b;
+	for (i = a; i <= b; i++)
+	{
+		if (f[pt(i)])
+			cout << i << " ";
+	}
 
 	return 0;
 }
